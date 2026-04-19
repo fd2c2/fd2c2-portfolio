@@ -1575,3 +1575,49 @@ a, button, .magnetic-target, .nav-link, .exp-item, .icon-link, .artifact-card, .
             transparent 60%, rgba(189, 147, 249, 0.03) 60.1%, transparent 60.2%);
     pointer-events: none;
 }
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+    .page-shell {
+        width: 90vw;
+        margin: 0 auto;
+    }
+    .panel {
+        padding: 6rem 0 3rem 0;
+        min-height: auto;
+    }
+    .hero-title {
+        font-size: clamp(2.5rem, 12vw, 4rem);
+    }
+    .site-header {
+        top: 1rem;
+        right: 1rem;
+        left: 1rem;
+        display: flex;
+        justify-content: center;
+    }
+    .site-nav {
+        width: 100%;
+        justify-content: space-between;
+        gap: 0;
+    }
+    .nav-link {
+        padding: 0.5rem 0.8rem;
+        font-size: 0.75rem;
+    }
+    .artifacts-grid {
+        grid-template-columns: 1fr;
+    }
+    .exp-split-container {
+        grid-template-columns: 1fr;
+    }
+    .contact-icons {
+        justify-content: center;
+    }
+    .glass-card {
+        padding: 1.5rem !important;
+    }
+    .skill-group {
+        justify-content: flex-start;
+    }
+}
