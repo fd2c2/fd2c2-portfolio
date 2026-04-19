@@ -1,4 +1,4 @@
-# Cyber-Minimalist Portfolio
+# Portfolio-fd2c2
 
 A high-end, immersive developer portfolio designed with a "Tech-Noir" aesthetic. This site features terminal-inspired interactions, minimalistic layouts, and a focus on systems engineering and AI.
 
