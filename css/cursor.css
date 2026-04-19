@@ -1,0 +1,38 @@
+.liquid-cursor {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 999px;
+    border: 0 solid transparent;
+    background: #8b5cf6;
+    pointer-events: none;
+    transform: translate3d(-50%, -50%, 0);
+    z-index: 200;
+    opacity: 0;
+    mix-blend-mode: difference;
+    transition: width 0.2s ease, height 0.2s ease, border-width 0.2s ease, background-color 0.2s ease, opacity 0.18s ease;
+}
+
+.liquid-cursor.is-visible {
+    opacity: 1;
+}
+
+.liquid-cursor.is-hovering {
+    width: 42px;
+    height: 42px;
+    border-width: 1.5px;
+    border-color: rgba(139, 92, 246, 0.95);
+    background: transparent;
+}
+
+@media (pointer: coarse) {
+    .liquid-cursor {
+        display: none;
+    }
+
+    body {
+        cursor: auto;
+    }
+}

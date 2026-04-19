@@ -1,0 +1,34 @@
+.site-header {
+    position: fixed;
+    top: 1.1rem;
+    right: 1.1rem;
+    z-index: 40;
+}
+
+.site-nav {
+    display: flex;
+    gap: 0.45rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    max-width: 520px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #dacfff;
+    border: 1px solid transparent;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    padding: 0.52rem 0.85rem;
+    background: rgba(20, 17, 29, 0.8);
+    transition: transform 0.25s cubic-bezier(0.22, 0.61, 0.36, 1), border-color 0.2s ease, color 0.2s ease, background-color 0.2s ease;
+    will-change: transform;
+}
+
+.nav-link:hover,
+.nav-link:focus-visible,
+.nav-link.is-active {
+    color: #ffffff;
+    border-color: rgba(201, 171, 255, 0.4);
+    background: rgba(138, 77, 255, 0.25);
+}

@@ -1,0 +1,75 @@
+.contact-icons {
+    margin-top: 1rem;
+    display: flex;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+}
+
+.icon-link {
+    text-decoration: none;
+    color: #f4efff;
+    padding: 0.58rem 0.85rem;
+    border-radius: 0.6rem;
+    border: 1px solid rgba(193, 163, 251, 0.28);
+    background: rgba(138, 77, 255, 0.1);
+}
+
+.message-overlay {
+    position: fixed;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.28s ease, visibility 0.28s ease;
+    background: rgba(0, 0, 0, 0.74);
+    z-index: 90;
+}
+
+.message-overlay.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.message-dialog {
+    width: min(92vw, 560px);
+    border-radius: 1rem;
+    border: 1px solid rgba(190, 160, 248, 0.28);
+    background: #101018;
+    padding: 1.2rem;
+}
+
+.overlay-close {
+    margin-left: auto;
+    margin-bottom: 0.5rem;
+    display: block;
+    border: 1px solid rgba(192, 167, 244, 0.3);
+    border-radius: 0.5rem;
+    background: rgba(138, 77, 255, 0.12);
+    color: #eee7ff;
+    padding: 0.4rem 0.7rem;
+    cursor: pointer;
+}
+
+.message-form {
+    margin-top: 0.75rem;
+    display: grid;
+    gap: 0.6rem;
+}
+
+.message-form label {
+    color: #dfd1ff;
+    font-size: 0.95rem;
+}
+
+.message-form input,
+.message-form textarea {
+    width: 100%;
+    border: 1px solid rgba(185, 151, 252, 0.3);
+    background: #0b0b12;
+    color: #f8f3ff;
+    border-radius: 0.55rem;
+    padding: 0.65rem 0.7rem;
+}

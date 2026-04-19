@@ -1,0 +1,101 @@
+:root {
+    --bg-primary: #050505;
+    --bg-secondary: #0b0b12;
+    --text-primary: #f4f0ff;
+    --text-secondary: #b7abcf;
+    --accent: #8a4dff;
+    --accent-soft: rgba(138, 77, 255, 0.22);
+    --border-soft: rgba(170, 144, 230, 0.25);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    color: var(--text-primary);
+    background: #050505;
+    font-family: "Inter", "Segoe UI", Roboto, sans-serif;
+    overflow: hidden;
+    cursor: none;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.03;
+    z-index: 2;
+    background-image:
+        radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.5) 0.4px, transparent 0.5px),
+        radial-gradient(circle at 80% 60%, rgba(255, 255, 255, 0.45) 0.35px, transparent 0.5px);
+    background-size: 3px 3px, 4px 4px;
+}
+
+.page-shell {
+    height: 100vh;
+    overflow-y: auto;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    position: relative;
+    z-index: 3;
+}
+
+.panel {
+    min-height: 100vh;
+    scroll-snap-align: start;
+    display: grid;
+    place-items: center;
+    padding: 4rem 2rem;
+}
+
+.panel-inner {
+    width: min(100%, 1000px);
+    padding: clamp(1.4rem, 2.5vw, 2.4rem);
+}
+
+.section-kicker {
+    display: inline-block;
+    font-size: 0.75rem;
+    letter-spacing: 0.14em;
+    color: #c3b1ed;
+    margin-bottom: 0.8rem;
+}
+
+.section-title {
+    font-size: clamp(2rem, 5vw, 4.2rem);
+    line-height: 1.1;
+    margin-bottom: 0.7rem;
+}
+
+.section-description {
+    color: var(--text-secondary);
+    max-width: 62ch;
+    line-height: 1.7;
+}
+
+.button-primary {
+    margin-top: 1.1rem;
+    border: 1px solid rgba(194, 165, 255, 0.45);
+    background: var(--accent-soft);
+    color: #f8f3ff;
+    padding: 0.75rem 1.05rem;
+    border-radius: 0.6rem;
+    transition: transform 0.25s cubic-bezier(0.22, 0.61, 0.36, 1), background-color 0.18s ease;
+    will-change: transform;
+}
+
+.button-primary:hover,
+.button-primary:focus-visible {
+    transform: translateY(-1px);
+    background: rgba(138, 77, 255, 0.35);
+}
